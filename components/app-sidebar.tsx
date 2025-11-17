@@ -1,5 +1,6 @@
 import {
   Sidebar,
+  SidebarMenu,
   SidebarFooter,
   SidebarGroup,
   SidebarGroupLabel,
@@ -34,8 +35,6 @@ const items = [
         },
     ]
        
-
-
 export function AppSidebar() {
   return (
     <Sidebar>
@@ -44,7 +43,8 @@ export function AppSidebar() {
         <SidebarGroupLabel>Components</SidebarGroupLabel>
         {items.map((item) => (
             <Collapsible key={item.title} defaultOpen className="group/collapsible">
-                <SidebarMenuItem>
+                <SidebarMenu>
+                  <SidebarMenuItem>
                     <CollapsibleTrigger asChild>
                         <SidebarMenuButton tooltip={item.title}>
                             <span>{item.title}</span>
@@ -53,17 +53,18 @@ export function AppSidebar() {
                     </CollapsibleTrigger>
 
                     <CollapsibleContent>
-                        <SidebarMenuSub>
-                            {items.map((item) => (
-                                <SidebarMenuSubItem key={item.title}>
-                                    <SidebarMenuSubButton href={item.url} title={item.title} >
-                                        <span>{item.title}</span>
-                                    </SidebarMenuSubButton>
-                                </SidebarMenuSubItem>
-                            ))}
-                        </SidebarMenuSub>
+                     <SidebarMenuSub>
+                       {items.map((item) => (
+                        <SidebarMenuSubItem key={item.title}>
+                           <SidebarMenuSubButton href={item.url} title={item.title} >
+                              <span>{item.title}</span>
+                              </SidebarMenuSubButton>
+                            </SidebarMenuSubItem>
+                        ))}
+                      </SidebarMenuSub>
                     </CollapsibleContent>
                 </SidebarMenuItem>
+                </SidebarMenu>
             </Collapsible>
         ))}
       </SidebarGroup>
