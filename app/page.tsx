@@ -1,9 +1,12 @@
-import Image from "next/image";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 export default function Home() {
   return (
-    <div>
-      
+    <div className="h-screen flex flex-col ">
+      <div>
+        <SidebarTrigger />
+      </div>
+
     </div>
   );
 }
