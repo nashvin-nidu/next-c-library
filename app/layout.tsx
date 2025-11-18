@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const satoshi = localFont({
+  src: "../public/fonts/satoshi/Satoshi-Variable.woff",
+  variable: "--font-satoshi",
+  weight: "100 900",
 });
 
 const geistMono = Geist_Mono({
@@ -26,9 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="scrollbar-hide">
+    <html lang="en" suppressHydrationWarning className="scrollbar-hide" >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+        className={`${satoshi.variable} ${geistMono.variable} antialiased `}
       >
         <ThemeProvider
             attribute="class"
@@ -36,13 +36,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <SidebarProvider >
-              <AppSidebar  />
-              <main className="w-full">
-                {children}
-              </main>
-            </SidebarProvider>
+            {children}
           </ThemeProvider>
+        
       </body>
     </html>
   );
