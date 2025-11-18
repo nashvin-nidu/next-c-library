@@ -40,14 +40,14 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader />
       <SidebarGroup>
-        <SidebarGroupLabel>Components</SidebarGroupLabel>
+        <SidebarGroupLabel className="font-sans">Components</SidebarGroupLabel>
         {items.map((item) => (
             <Collapsible key={item.title} defaultOpen className="group/collapsible">
                 <SidebarMenu>
                   <SidebarMenuItem>
                     <CollapsibleTrigger asChild>
                         <SidebarMenuButton tooltip={item.title}>
-                            <span>{item.title}</span>
+                            <span className="font-sans">{item.title}</span>
                             <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                         </SidebarMenuButton>
                     </CollapsibleTrigger>
@@ -57,7 +57,7 @@ export function AppSidebar() {
                        {items.map((item) => (
                         <SidebarMenuSubItem key={item.title}>
                            <SidebarMenuSubButton href={item.url} title={item.title} >
-                              <span>{item.title}</span>
+                              <span className="font-mono">{item.title}</span>
                               </SidebarMenuSubButton>
                             </SidebarMenuSubItem>
                         ))}
