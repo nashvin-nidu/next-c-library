@@ -1,16 +1,16 @@
 import { ThemeButton } from "@/components/page-component/Buttons";
 import MenuContent from "@/components/page-component/MenuContent";
 import { PreviewCanvas } from "@/components/page-component/Preview";
+import { getComponentData } from "@/lib/component-registry";
 
  const ComponentPage = async ({params} : {params: Promise<{slug:string}>}) => {
     const {slug} = await params;
     
-    const Moudule = await import(`@/components/previews/${slug}`);
-
-    const m = Moudule.Data
-    const p = Moudule.Preview
-    console.log(m)
-    console.log(p)
+    const Data = getComponentData(slug);
+    
+    if (!Data) {
+      return <div className="text-center"><h1>Component not found</h1></div>;
+    }
 
     return(
         <div className="flex bg-(--container)">
@@ -23,7 +23,7 @@ import { PreviewCanvas } from "@/components/page-component/Preview";
                     <span>{`Components/${slug}`}</span>
                 </div>
                 
-                <MenuContent />
+                <MenuContent data={Data}/>
             </div>
 
             {/* Preview Component */}
