@@ -1,4 +1,4 @@
-interface ComponentData {
+export interface ComponentData {
   title: string;
   description: string;
   installation: string;

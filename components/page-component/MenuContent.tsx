@@ -1,18 +1,10 @@
 import CodeBlock from "./CodeBlock";
 import FooterMenuContent from "./FooterMenuContent";
 import { CopyButton, PromptButton } from "./Buttons";
+import { ComponentData } from "@/lib/component-registry";
 
 
-interface Data {
-  title: string;
-  description: string;
-  installation: string;
-  sourceCode: string;
-  dependencies: string[];
-}
-
-
-const MenuContent = ({data} : { data: Data}) => {
+const MenuContent = ({data} : { data: ComponentData}) => {
   return (
     <div className="flex flex-col p-10 overflow-y-auto max-h-full scrollbar-hide">
       <h1 className="font-sans font-bold mb-3">{data.title}</h1>
