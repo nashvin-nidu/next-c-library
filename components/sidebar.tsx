@@ -60,12 +60,8 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader />
       <SidebarGroup>
-<<<<<<< Updated upstream:components/app/sidebar.tsx
-        <SidebarGroupLabel className="font-sans">Components</SidebarGroupLabel>
-=======
 <<<<<<<< Updated upstream:components/app-sidebar.tsx
         <SidebarGroupLabel>Components</SidebarGroupLabel>
->>>>>>> Stashed changes:components/app-sidebar.tsx
         {items.map((item) => (
 ========
         <SidebarGroupLabel className="font-sans">Components</SidebarGroupLabel>
@@ -78,9 +74,6 @@ export function AppSidebar() {
                     <CollapsibleTrigger asChild>
                       
                         <SidebarMenuButton tooltip={item.title}>
-<<<<<<< Updated upstream:components/app/sidebar.tsx
-                            <span className="font-sans">{item.title}</span>
-=======
 <<<<<<<< Updated upstream:components/app-sidebar.tsx
                             <span>{item.title}</span>
 ========
@@ -88,7 +81,6 @@ export function AppSidebar() {
                             <span className="font-sans">{item.title}</span>
                           </a>
 >>>>>>>> Stashed changes:components/sidebar.tsx
->>>>>>> Stashed changes:components/app-sidebar.tsx
                             <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                         </SidebarMenuButton>
                     </CollapsibleTrigger>
@@ -98,7 +90,7 @@ export function AppSidebar() {
                        {chldItems.map((item) => (
                         <SidebarMenuSubItem key={item.title}>
                            <SidebarMenuSubButton href={item.url} title={item.title} >
-                              <span className="font-mono">{item.title}</span>
+                              <span>{item.title}</span>
                               </SidebarMenuSubButton>
                             </SidebarMenuSubItem>
                         ))}
