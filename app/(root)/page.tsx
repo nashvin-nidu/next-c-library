@@ -1,4 +1,4 @@
-import Section from "@/components/section";
+import { ComponentCard } from "@/components/ui/card";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import data_components from "@/lib/constants/data-components";
 
