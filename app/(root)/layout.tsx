@@ -1,6 +1,10 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import { AppSidebar } from "@/components/app/sidebar";
+=======
+import { AppSidebar } from "@/components/sidebar";
+>>>>>>> Stashed changes
 =======
 import { AppSidebar } from "@/components/sidebar";
 >>>>>>> Stashed changes
