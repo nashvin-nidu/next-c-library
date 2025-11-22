@@ -13,8 +13,7 @@ import { getComponentData } from "@/lib/component-registry";
     }
 
     return(
-        <div className="flex bg-(--container)">
-
+        <div className="flex bg-card">
             {/* Component Menu */}
             <div className="w-[35%] h-screen overflow-hidden">
 
