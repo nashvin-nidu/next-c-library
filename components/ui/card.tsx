@@ -1,9 +1,10 @@
 'use client'
 
 import Link from "next/link"
+import { Component } from "@/lib/constants/data-components"
 
-export const ComponentCard = (
-    {title, description, video_slug}: {title: string; description:string; video_slug: string}) =>{
+export const ComponentCard = ({data} : {data: Component }) =>{
+
    return(
     <Link href="#">
         <div className="shrink-0 px-1 pb-1 bg-card border-2 rounded-xl cursor-pointer">
