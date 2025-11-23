@@ -2,6 +2,7 @@ import { ThemeButton } from "@/components/page-component/Buttons";
 import MenuContent from "@/components/page-component/MenuContent";
 import { PreviewCanvas } from "@/components/page-component/Preview";
 import { getComponentData } from "@/lib/component-registry";
+import Link from "next/link";
 
  const ComponentPage = async ({params} : {params: Promise<{slug:string}>}) => {
     const {slug} = await params;
@@ -11,15 +12,16 @@ import { getComponentData } from "@/lib/component-registry";
     if (!Data) {
       return <div className="text-center"><h1>Component not found</h1></div>;
     }
-
     return(
-        <div className="flex bg-card">
+        <div className="flex">
             {/* Component Menu */}
             <div className="w-[35%] h-screen overflow-hidden">
 
                 {/* Component Header, Interactive a links, buttons */}
                 <div className="px-10 py-5 mt-5">
-                    <span>{`Components/${slug}`}</span>
+                    <span>
+                        <Link className="underline" href={'/'}>Components</Link>{`/${slug}`}
+                    </span>
                 </div>
                 
                 <MenuContent data={Data}/>

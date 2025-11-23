@@ -1,10 +1,9 @@
 'use client'
 
 import Link from "next/link"
-import { Component } from "@/lib/constants/data-components"
+import { ComponentData } from "@/lib/component-registry";
 
-export const ComponentCard = ({data} : {data: Component }) =>{
-
+export const ComponentCard = ({data} : {data: ComponentData }) => {
    return(
     <Link href={`/component/${data.slug}`}>
         <div className="shrink-0 px-1 pb-1 bg-card border-2 rounded-xl cursor-pointer">
@@ -22,7 +21,6 @@ export const ComponentCard = ({data} : {data: Component }) =>{
                 onMouseLeave={(e) => {e.currentTarget.pause(); e.currentTarget.currentTime = 0;}}
                 className="rounded-xl w-full h-full object-cover" />
             </div>
-
         </div>
     </Link>
    )

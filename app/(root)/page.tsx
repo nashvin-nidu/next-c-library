@@ -1,25 +1,20 @@
-import { ComponentCard } from "@/components/ui/card";
+import Section from "@/components/section";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import data_components from "@/lib/constants/data-components";
+import { componentRegistry } from "@/lib/component-registry";
 
 
 
 export default function Page() {
-  const data = data_components;
+    const buttonsData = componentRegistry.buttons || [];
+    const navbarData = componentRegistry.navbar || [];
+    const carouselData = componentRegistry.carousel || [];
   return (
     <div className="h-screen flex flex-col ">
-      <div>
         <SidebarTrigger />
-      </div>
 
-      <div className=" m-3 px-5 bg-(--container-app) border-2 rounded-2xl">
-        <div className="overflow-x-auto scrollbar-hide  flex mt-5 gap-7 pb-5">
-          {data.map((component) => (
-            <ComponentCard key={component.title} data={component} />
-          ))}
-        </div>
-        
-      </div>
+        <Section data={buttonsData} title={"Buttons"} endPoint={"/buttons"} />
+        <Section data={navbarData} title={"NavBar"} endPoint={"/navbar"} />
+        <Section data={carouselData} title={"Carousel"} endPoint={"/carousel"} />
     </div>
   );
 }
