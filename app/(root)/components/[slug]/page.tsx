@@ -1,16 +1,13 @@
 import { ComponentCard } from "@/components/ui/card";
-import {metaData} from "@/lib/component-registry";
+import {ComponentData, componentRegistry} from "@/lib/component-registry";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-
-
 
 
 export default async function  Components({params} : {params: Promise<{slug:string}>}) {
   const {slug} = await params;
   console.log(slug)
-  const slugName = slug.charAt(0).toUpperCase() + slug.slice(1);
-  const data = metaData.find(item => item[slugName])?.[slugName] || [];
+  const data : ComponentData[] = componentRegistry[slug] || [];
 
 
   return (
