@@ -9,13 +9,10 @@ const MenuContent = ({data} : { data: ComponentData}) => {
     <div className="flex flex-col p-10 overflow-y-auto max-h-full scrollbar-hide">
       <h1 className="font-sans font-bold mb-3">{data.title}</h1>
       <span className="text-sm mb-10">{data.description}</span>
-
       <div className="mb-5">
         <h1 className="font-sans font-bold mb-2">Installation</h1>
-        <div className="flex justify-start items-center bg-card w-full h-15 px-3 rounded-sm overflow-x-auto scrollbar-hide ">
-          <p className="font-mono text-sm whitespace-nowrap">
-            <span className="font-bold">npx</span> shadcn@latest add
-            https://21st.dev/r/aceternity/sidebar</p>
+        <div className="bg-card flex justify-start items-center w-full h-15 px-3 rounded-sm overflow-x-auto scrollbar-hide ">
+          <p className="font-mono text-sm whitespace-nowrap">{data.installationCode}</p>
         </div>
       </div>
 
@@ -36,7 +33,7 @@ const MenuContent = ({data} : { data: ComponentData}) => {
         </div>
       </div>
 
-      <FooterMenuContent />
+      <FooterMenuContent dataCard={data.dependencies} />
     </div>
   );
 };

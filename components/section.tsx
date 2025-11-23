@@ -1,9 +1,9 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { ComponentCard } from "./ui/card";
-import { ComponentmetaData } from "@/lib/component-registry";
+import { ComponentData} from "@/lib/component-registry";
 
-export default function Section({data, title, endPoint}: {data: ComponentmetaData[]; title: string, endPoint: string;}) {
+export default function Section({data, title, endPoint}: {data: ComponentData[]; title: string, endPoint: string;}) {
 
   return (
     <div className="m-3 px-5">
@@ -14,8 +14,9 @@ export default function Section({data, title, endPoint}: {data: ComponentmetaDat
             <ArrowRight width={16} height={16}/>
           </Link>
         </div>
+        
         <div className="overflow-x-auto scrollbar-hide  flex mt-5 gap-7 pb-5">
-          {data.map((component: ComponentmetaData) => 
+          {data.map((component: ComponentData) => 
           (
             <ComponentCard key={component.title} data={component} />
           ))}
@@ -23,3 +24,4 @@ export default function Section({data, title, endPoint}: {data: ComponentmetaDat
       </div>
   );
 }
+
