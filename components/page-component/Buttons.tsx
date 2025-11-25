@@ -14,6 +14,7 @@ export const ThemeButton = () =>{
                 id="theme" 
                 onClick={toggleTheme}
                 className="flex flex-center gap-2 py-1 px-3 bg-card border-2 rounded-md cursor-pointer" 
+                suppressHydrationWarning
             >
                 {resolvedTheme === 'dark' ? (
                     <Sun className="w-4 h-4" />
