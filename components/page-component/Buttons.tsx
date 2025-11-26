@@ -29,9 +29,18 @@ export const ThemeButton = () =>{
 }
 
 
-export const CopyButton = () =>{
-    return(
-        <button type="button" className="flex px-3 py-1 gap-2 flex-center bg-card border-card rounded-md cursor-pointer">
+export const CopyButton = ({data} : {data: string}) =>{
+    const handleClick = async () => {
+        try {
+            await navigator.clipboard.writeText(data);
+            // Optional: show success feedback
+            console.log(data)
+        } catch (err) {
+            console.error('Failed to copy:', err);
+        }
+    }
+        return(
+        <button type="button" onClick={handleClick} className="flex px-3 py-1 gap-2 flex-center bg-card border-card rounded-md cursor-pointer">
             <Copy className="w-4 h-4" />
             <span>Copy</span>
         </button>
@@ -39,9 +48,18 @@ export const CopyButton = () =>{
     )
 }
 
-export const PromptButton = () =>{
+export const PromptButton = ({data} : {data: string}) => {
+    const handleClick = async () => {
+        try {
+            await navigator.clipboard.writeText(data);
+            // Optional: show success feedback
+            console.log(data)
+        } catch (err) {
+            console.error('Failed to copy:', err);
+        }
+    }
     return(
-        <button type="button" className="flex px-3 py-1 gap-2 flex-center bg-card border-card rounded-md cursor-pointer">
+        <button type="button" onClick={handleClick} className="flex px-3 py-1 gap-2 flex-center bg-card border-card rounded-md cursor-pointer">
             <FileText className="w-4 h-4" />
             <span>Prompt</span>
         </button>
