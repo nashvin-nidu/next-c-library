@@ -17,7 +17,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
-import { ArrowLeft, ChevronRight, Home } from "lucide-react"
+import { ChevronRight, HomeIcon } from "lucide-react"
 import { componentRegistry } from "@/lib/component-registry"
 import Link from "next/link";
 
@@ -49,9 +49,9 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader></SidebarHeader>
       <SidebarGroup>
-        <SidebarGroupLabel className="font-sans text-base gap-1">
+        <SidebarGroupLabel className="font-sans text-base gap-2">
             <Link href="/">
-              <ArrowLeft width={16} height={16}/>
+              <HomeIcon width={16} height={16}/>
             </Link>
             <span>Components</span>
           </SidebarGroupLabel>
