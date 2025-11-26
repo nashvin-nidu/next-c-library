@@ -13,7 +13,7 @@ export const PreviewCanvas = ({preview} : {preview: string}) =>{
     );
     
     return(
-        <div className="flex flex-center h-full ">
+        <div className="h-full w-full overflow-auto flex flex-center">
             <Preview />    
         </div> 
     )

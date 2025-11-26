@@ -57,4 +57,4 @@ function Gallery4Demo() {
   return <Gallery4 {...demoData} />;
 }
 
-export { Gallery4Demo };
+export default Gallery4Demo;

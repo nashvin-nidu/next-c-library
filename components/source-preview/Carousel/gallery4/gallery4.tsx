@@ -100,14 +100,14 @@ const Gallery4 = ({
   }, [carouselApi]);
 
   return (
-    <section className="py-32">
-      <div className="container mx-auto">
+    <section className="py-8 md:py-16 w-full">
+      <div className="container mx-auto px-4">
         <div className="mb-8 flex items-end justify-between md:mb-14 lg:mb-16">
           <div className="flex flex-col gap-4">
-            <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl">
+            <h2 className="text-2xl font-medium md:text-3xl lg:text-4xl">
               {title}
             </h2>
-            <p className="max-w-lg text-muted-foreground">{description}</p>
+            <p className="max-w-lg text-sm md:text-base text-muted-foreground">{description}</p>
           </div>
           <div className="hidden shrink-0 gap-2 md:flex">
             <Button
