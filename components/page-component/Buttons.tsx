@@ -1,6 +1,9 @@
 'use client'
 import { useTheme } from "next-themes"
 import { Copy, FileText, Moon, Sun } from "lucide-react"
+import { toast } from "sonner"
+import { Button } from "../ui/button"
+
 
 export const ThemeButton = () =>{
       const { resolvedTheme, setTheme } = useTheme()
@@ -8,7 +11,7 @@ export const ThemeButton = () =>{
         setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
       }
     return(
-        <div className="h-15">
+        <div className="h-15 relative z-50">
             <button 
                 type="button" 
                 id="theme" 
@@ -29,21 +32,39 @@ export const ThemeButton = () =>{
 }
 
 
-export const CopyButton = () =>{
+export const CopyButton = ({data} : {data: string}) =>{
+    const handleClick = async () => {
+        try {
+            await navigator.clipboard.writeText(data);
+            toast.success("Code has been Copied")
+        } catch (err) {
+            console.error('Failed to copy:', err);
+            toast.error("Code Not Copied")
+        }
+    }  
     return(
-        <button type="button" className="flex px-3 py-1 gap-2 flex-center bg-card border-card rounded-md cursor-pointer">
+        <Button type="button" variant="outline" onClick={handleClick} className="flex px-3 py-1 gap-2 flex-center bg-card border-card rounded-md cursor-pointer">
             <Copy className="w-4 h-4" />
             <span>Copy</span>
-        </button>
-        
+        </Button> 
     )
 }
 
-export const PromptButton = () =>{
+export const PromptButton = ({data} : {data: string}) => {
+    const handleClick = async () => {
+        try {
+            await navigator.clipboard.writeText(data);
+            toast.success("Prompt has been Copied")
+        } catch (err) {
+            console.error('Failed to copy:', err);
+            toast.error("Event has not been created")
+        }
+    }
+
     return(
-        <button type="button" className="flex px-3 py-1 gap-2 flex-center bg-card border-card rounded-md cursor-pointer">
+        <Button type="button" variant="outline" onClick={handleClick} className="flex px-3 py-1 gap-2 flex-center bg-card border-card rounded-md cursor-pointer">
             <FileText className="w-4 h-4" />
             <span>Prompt</span>
-        </button>
+        </Button>
     )
 }

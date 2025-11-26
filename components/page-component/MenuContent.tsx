@@ -21,8 +21,8 @@ const MenuContent = ({data} : { data: ComponentData}) => {
         <h1 className="font-sans font-bold mb-5">How to Use</h1>
         <div className="flex gap-5 mb-5">
 
-          <CopyButton />
-          <PromptButton />
+          <CopyButton data={data.sourceCode} />
+          <PromptButton data={data.prompt} />
         </div>
 
         <div className="flex justify-start items-center bg-card w-full rounded-sm">
