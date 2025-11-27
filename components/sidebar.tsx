@@ -3,7 +3,6 @@ import {
   SidebarMenu,
   SidebarFooter,
   SidebarGroup,
-  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -21,8 +20,6 @@ import Logo from "./ui/logo"
 import { ChevronRight } from "lucide-react"
 import { componentRegistry } from "@/lib/component-registry"
 import Link from "next/link";
-import Image from "next/image";
-import { useTheme } from "next-themes";
 
 const buttonsData = componentRegistry.buttons || [];
 const navbarData = componentRegistry.navbar || [];
