@@ -5,10 +5,11 @@ import { toast } from "sonner"
 import { Button } from "../ui/button"
 
 
+
 export const ThemeButton = () =>{
-      const { resolvedTheme, setTheme } = useTheme()
+      const { theme = 'dark', setTheme } = useTheme()
       const toggleTheme = () => {
-        setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+        setTheme(theme === 'dark' ? 'light' : 'dark');
       }
     return(
         <div className="h-15 relative z-50">
@@ -16,15 +17,14 @@ export const ThemeButton = () =>{
                 type="button" 
                 id="theme" 
                 onClick={toggleTheme}
-                className="flex flex-center gap-2 py-1 px-3 bg-card border-2 rounded-md cursor-pointer" 
-                suppressHydrationWarning
+                className="flex flex-center gap-2 py-1 px-3 bg-card border-2 rounded-md cursor-pointer"
             >
-                {resolvedTheme === 'dark' ? (
+                {theme === 'dark' ? (
                     <Sun className="w-4 h-4" />
                 ) : (
                     <Moon className="w-4 h-4" />
                 )}
-                <span>{resolvedTheme === 'dark' ? 'Light' : 'Dark'}</span>
+                <span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
             </button>
         </div>
         
@@ -32,20 +32,21 @@ export const ThemeButton = () =>{
 }
 
 
+export const CopyCode = async (data: string) => {
+    try {
+        await navigator.clipboard.writeText(data);
+        toast.success("Code has been Copied")
+    } catch (err) {
+        console.error('Failed to copy:', err);
+        toast.error("Code Not Copied")
+    }
+}
+
 export const CopyButton = ({data} : {data: string}) =>{
-    const handleClick = async () => {
-        try {
-            await navigator.clipboard.writeText(data);
-            toast.success("Code has been Copied")
-        } catch (err) {
-            console.error('Failed to copy:', err);
-            toast.error("Code Not Copied")
-        }
-    }  
     return(
-        <Button type="button" variant="outline" onClick={handleClick} className="flex px-3 py-1 gap-2 flex-center bg-card border-card rounded-md cursor-pointer">
+        <Button type="button" variant="outline" onClick={ () => CopyCode(data)} className="flex px-3 py-1 gap-2 flex-center bg-card border-card rounded-md cursor-pointer">
             <Copy className="w-4 h-4" />
-            <span>Copy</span>
+            <span>Copy Code</span>
         </Button> 
     )
 }
