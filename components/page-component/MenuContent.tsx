@@ -2,6 +2,7 @@ import CodeBlock from "./CodeBlock";
 import FooterMenuContent from "./FooterMenuContent";
 import { CopyButton, PromptButton } from "./Buttons";
 import { ComponentData } from "@/lib/component-registry";
+import InstallationCode from "./InstallationCode";
 
 
 const MenuContent = ({data} : { data: ComponentData}) => {
@@ -9,12 +10,7 @@ const MenuContent = ({data} : { data: ComponentData}) => {
     <div className="flex flex-col p-10 overflow-y-auto max-h-full scrollbar-hide">
       <h1 className="font-sans font-bold mb-3">{data.title}</h1>
       <span className="text-sm mb-10">{data.description}</span>
-      <div className="mb-5">
-        <h1 className="font-sans font-bold mb-2">Installation</h1>
-        <div className="bg-card flex justify-start items-center w-full h-15 px-3 rounded-sm overflow-x-auto scrollbar-hide ">
-          <p className="font-mono text-sm whitespace-nowrap">{data.installationCode}</p>
-        </div>
-      </div>
+      <InstallationCode data={data.installationCode} />
 
       {/* Code Block */}
       <div className="flex flex-col mb-5">
