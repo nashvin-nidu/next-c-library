@@ -5,7 +5,7 @@ const Logo = () => {
          <div className="flex font-mono font-bold text-lg gap-2 py-5 px-2">
           <Image src="/logo-dark.png" alt="logo" width={24} height={24} className="dark:block hidden" />
           <Image src="/logo.png" alt="logo" width={24} height={24} className="dark:hidden block" />
-          <span>Components</span>
+          <span>Compass Ui</span>
         </div>
     )
 }
