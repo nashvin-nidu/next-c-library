@@ -1,8 +1,8 @@
+import { BreadCrumb } from "@/components/breadcrumb";
 import { ThemeButton } from "@/components/page-component/Buttons";
 import MenuContent from "@/components/page-component/MenuContent";
 import { PreviewCanvas } from "@/components/page-component/Preview";
 import { getComponentData } from "@/lib/component-registry";
-import Link from "next/link";
 
  const ComponentPage = async ({params} : {params: Promise<{slug:string}>}) => {
     const {slug} = await params;
@@ -19,9 +19,7 @@ import Link from "next/link";
 
                 {/* Component Header, Interactive a links, buttons */}
                 <div className="px-10 py-5 mt-5">
-                    <span>
-                        <Link className="underline" href={'/'}>Components</Link>{`/${slug}`}
-                    </span>
+                    <BreadCrumb slug={slug} />
                 </div>
                 
                 <MenuContent data={Data}/>
