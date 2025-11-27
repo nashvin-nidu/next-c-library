@@ -17,9 +17,12 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
-import { ChevronRight, HomeIcon } from "lucide-react"
+import Logo from "./ui/logo"
+import { ChevronRight } from "lucide-react"
 import { componentRegistry } from "@/lib/component-registry"
 import Link from "next/link";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const buttonsData = componentRegistry.buttons || [];
 const navbarData = componentRegistry.navbar || [];
@@ -45,16 +48,14 @@ const parentItems = [
 
 
 export function AppSidebar() {
+
+
   return (
     <Sidebar>
-      <SidebarHeader></SidebarHeader>
+      <SidebarHeader>
+        <Logo />
+      </SidebarHeader>
       <SidebarGroup>
-        <SidebarGroupLabel className="font-sans text-base gap-2">
-            <Link href="/">
-              <HomeIcon width={16} height={16}/>
-            </Link>
-            <span>Components</span>
-          </SidebarGroupLabel>
         {parentItems.map((item) => (
           <Collapsible key={item.title} defaultOpen className="group/collapsible">
             <SidebarMenu>
