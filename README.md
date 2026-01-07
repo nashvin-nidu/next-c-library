@@ -33,16 +33,3 @@ The library currently includes the following components:
 - **Collapsible**: Expandable/collapsible content sections.
 - **Sonner**: Stackable toast notifications.
 
-## Getting Started
-
-To run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
