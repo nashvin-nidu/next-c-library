@@ -11,7 +11,6 @@ A modern, accessible, and customizable component library built with Next.js, Tai
 - **Animations:** [Framer Motion](https://www.framer.com/motion/)
 - **Utility:** [clsx](https://github.com/lukeed/clsx) & [tailwind-merge](https://github.com/dcastil/tailwind-merge)
 
-## Components
 
 The library currently includes the following components:
 
