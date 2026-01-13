@@ -9,8 +9,7 @@ A modern, accessible, and customizable component library built with Next.js, Tai
 - **Primitives:** [Radix UI](https://www.radix-ui.com/)
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Animations:** [Framer Motion](https://www.framer.com/motion/)
-- **Utility:** [clsx](https://github.com/lukeed/clsx) & [tailwind-merge](https://github.com/dcastil/tailwind-merge)
-
+- **Utility:** [clsx](
 
 The library currently includes the following components:
 
