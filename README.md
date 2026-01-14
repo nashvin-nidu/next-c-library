@@ -29,5 +29,3 @@ The library currently includes the following components:
 - **Skeleton**: Loading placeholders for improved UX.
 - **Tooltip**: informational popups on hover/focus.
 - **Collapsible**: Expandable/collapsible content sections.
-- **Sonner**: Stackable toast notifications.
-
