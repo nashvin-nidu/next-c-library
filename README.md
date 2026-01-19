@@ -21,11 +21,3 @@ The library currently includes the following components:
 ### Navigation
 - **Breadcrumb**: Navigation trail for nested pages.
 
-### UI Elements
-- **Button**: Versatile button component with multiple variants.
-- **Card**: Container for grouping related content.
-- **Input**: Form input fields with various states.
-- **Separator**: Visual divider for content sections.
-- **Skeleton**: Loading placeholders for improved UX.
-- **Tooltip**: informational popups on hover/focus.
-- **Collapsible**: Expandable/collapsible content sections.
