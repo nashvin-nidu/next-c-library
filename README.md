@@ -18,6 +18,4 @@ The library currently includes the following components:
 - **Section**: semantic section wrapper.
 - **Sheet**: Slide-out panels for mobile navigation or quick actions.
 
-### Navigation
-- **Breadcrumb**: Navigation trail for nested pages.
 
