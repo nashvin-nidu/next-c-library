@@ -9,13 +9,4 @@ A modern, accessible, and customizable component library built with Next.js, Tai
 - **Primitives:** [Radix UI](https://www.radix-ui.com/)
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Animations:** [Framer Motion](https://www.framer.com/motion/)
-- **Utility:** [clsx](
-
-The library currently includes the following components:
-
-### Layout
-- **Sidebar**: Customizable sidebar navigation with collapsible support.
-- **Section**: semantic section wrapper.
-- **Sheet**: Slide-out panels for mobile navigation or quick actions.
-
-
+- **Utility:** [clsx]
