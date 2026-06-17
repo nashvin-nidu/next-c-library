@@ -11,6 +11,7 @@ const satoshi = localFont({
   weight: "100 900",
 });
 
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -33,7 +34,7 @@ export default function RootLayout({
       >
         <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
           >
