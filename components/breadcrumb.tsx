@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/breadcrumb"
 import { componentRegistry } from "@/lib/component-registry"
 
+
+
 function getCategoryFromSlug(slug: string): string | null {
   for (const [category, components] of Object.entries(componentRegistry)) {
     const found = components.find(c => c.slug === slug);
