@@ -10,6 +10,7 @@ export default function Page() {
     const carouselData = componentRegistry.carousel || [];
   return (
     <div className="h-screen flex flex-col ">
+
         <SidebarTrigger />
 
         <Section data={buttonsData} title={"Buttons"} endPoint={"/buttons"} />
