@@ -13,12 +13,14 @@ import { componentRegistry } from "@/lib/component-registry"
 
 
 function getCategoryFromSlug(slug: string): string | null {
+
   for (const [category, components] of Object.entries(componentRegistry)) {
     const found = components.find(c => c.slug === slug);
     if (found) return category;
   }
   return null;
 }
+
 
 export function BreadCrumb({slug} : {slug : string}) {
   const category = getCategoryFromSlug(slug);
