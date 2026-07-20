@@ -6,8 +6,10 @@ import { ComponentData} from "@/lib/component-registry";
 export default function Section({data, title, endPoint}: {data: ComponentData[]; title: string, endPoint: string;}) {
 
   return (
+
     <div className="m-3 px-5">
         <div className="flex justify-between pt-3 pr-10">
+
           <h2 className="text-sm">{title}</h2>
           <Link href={`/components${endPoint}`} className="flex flex-center gap-2 ">
 
