@@ -75,9 +75,13 @@ export function AppSidebar() {
                       </SidebarMenuSubItem>
                     ))}
                   </SidebarMenuSub>
+
                 </CollapsibleContent>
+
               </SidebarMenuItem>
+
             </SidebarMenu>
+
           </Collapsible>
         ))}
       </SidebarGroup>
