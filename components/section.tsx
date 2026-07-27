@@ -13,9 +13,11 @@ export default function Section({data, title, endPoint}: {data: ComponentData[];
           <h2 className="text-sm">{title}</h2>
           <Link href={`/components${endPoint}`} className="flex flex-center gap-2 ">
 
+
             <p className="text-sm">View All</p>
             <ArrowRight width={16} height={16}/>
           </Link>
+
 
         </div>
         
