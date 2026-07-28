@@ -14,12 +14,15 @@ export default function Section({data, title, endPoint}: {data: ComponentData[];
           <Link href={`/components${endPoint}`} className="flex flex-center gap-2 ">
 
 
+
             <p className="text-sm">View All</p>
             <ArrowRight width={16} height={16}/>
           </Link>
 
 
+
         </div>
+
         
         <div className="overflow-x-auto scrollbar-hide  flex mt-5 gap-7 pb-5">
           {data.map((component: ComponentData) => 
