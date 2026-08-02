@@ -21,6 +21,10 @@ import { ChevronRight } from "lucide-react"
 import { componentRegistry } from "@/lib/component-registry"
 import Link from "next/link";
 
+
+
+
+
 const buttonsData = componentRegistry.buttons || [];
 const navbarData = componentRegistry.navbar || [];
 const carouselData = componentRegistry.carousel || [];
