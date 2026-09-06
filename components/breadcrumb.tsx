@@ -29,7 +29,8 @@ export function BreadCrumb({slug} : {slug : string}) {
     <Breadcrumb>
       <BreadcrumbList className="text-lg">
         <BreadcrumbItem>
-          <BreadcrumbLink asChild>
+          <BreadcrumbLink asChi.
+ld>
             <Link href="/">Home</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
