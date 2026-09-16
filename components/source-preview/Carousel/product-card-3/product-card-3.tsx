@@ -10,7 +10,10 @@ import {
 } from "./card"; // Assuming these are your shadcn Card components
 import { Button } from "./button"; // Assuming shadcn Button component
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { cn } from "@/lib/utils"; // Your utility for merging class names
+import { cn } from "@/lib/utils"; //
+
+
+ Your utility for merging class names
 
 // Define the type for a single drop item
 export interface DropItem {
