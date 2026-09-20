@@ -12,6 +12,8 @@ import { getComponentData } from "@/lib/component-registry";
     if (!Data) {
       return <div className="text-center"><h1>Component not found</h1></div>;
     }
+
+
     return(
         <div className="flex">
             {/* Component Menu */}
