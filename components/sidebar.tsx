@@ -17,10 +17,10 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
 import Logo from "./ui/logo"
+
 import { ChevronRight } from "lucide-react"
 import { componentRegistry } from "@/lib/component-registry"
 import Link from "next/link";
-
 
 
 
