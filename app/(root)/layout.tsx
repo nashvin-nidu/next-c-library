@@ -13,4 +13,5 @@ const HomePageLayout = ({children} : {children : React.ReactNode}) => {
     )
 }
 
-export default HomePageLayout;
+export default HomePa
+geLayout;
