@@ -13,5 +13,6 @@ const HomePageLayout = ({children} : {children : React.ReactNode}) => {
     )
 }
 
+
 export default HomePa
 geLayout;
