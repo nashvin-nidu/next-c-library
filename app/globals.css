@@ -70,6 +70,8 @@
   0% {
     transform: translateZ(0) rotate(0);
     }
+
+
   15%, 35% {
     transform: translateZ(0) rotate(90deg);
     }
