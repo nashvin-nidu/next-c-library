@@ -22,6 +22,7 @@ function getCategoryFromSlug(slug: string): string | null {
 }
 
 
+
 export function BreadCrumb({slug} : {slug : string}) {
   const category = getCategoryFromSlug(slug);
   
